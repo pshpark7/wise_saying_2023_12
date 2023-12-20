@@ -12,6 +12,7 @@ public class App {
 	public void run() {
 		System.out.println("== 명언 앱 실행 ==");
 		// trim() : 혹시 있을지 모르는 좌우 공백 제거
+		int n = 1;
 		while (true) {
 			System.out.print("명령어 ) ");
 			String cmd = sc.nextLine().trim();
@@ -23,9 +24,11 @@ public class App {
 				String content = sc.nextLine().trim();
 				System.out.print("작가 : ");
 				String author = sc.nextLine().trim();
-				System.out.println("1번 명언이 등록되었습니다.");
+				System.out.printf("%d번 명언이 등록되었습니다.\n");
+				n++;
 			}
-		}
 
+		}
 	}
+
 }
