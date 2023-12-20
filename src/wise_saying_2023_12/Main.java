@@ -1,9 +1,14 @@
 package wise_saying_2023_12;
 
+import java.util.Scanner;
+
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("123");
 
+		Scanner sc = new Scanner(System.in);
+
+		new App(sc).run();
+
+		sc.close();
 	}
-
 }
