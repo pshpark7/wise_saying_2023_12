@@ -1,4 +1,4 @@
-package wise_saying_2023_12;
+package com.ws.wiseSaying.entity;
 
 public class WiseSaying {
 	private int id;

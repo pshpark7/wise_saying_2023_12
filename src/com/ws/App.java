@@ -1,8 +1,10 @@
-package wise_saying_2023_12;
+package com.ws;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import com.ws.wiseSaying.entity.WiseSaying;
 
 public class App {
 	private Scanner sc;
@@ -41,7 +43,7 @@ public class App {
 				} else {
 					System.out.println("번호 / 작가 / 명언");
 					System.out.println("==================");
-					for (int i = wiseSayings.size()-1; i >= 0;i--)  {
+					for (int i = wiseSayings.size() - 1; i >= 0;i--)  {
 						WiseSaying ws = wiseSayings.get(i);
 						System.out.printf("번호 : %d / 작가 : %s / 명언 : %s\n", ws.getId(),ws.getAuthor(),ws.getContent());
 					}
