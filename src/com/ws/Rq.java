@@ -12,15 +12,15 @@ public class Rq {
 
 		actionCode = cmdBits[0];
 		params = new HashMap<>();
-		
-		if(cmdBits.length  == 1) {
+
+		if (cmdBits.length == 1) {
 			return;
 		}
 		String[] paramBits = cmdBits[1].split("&");
 
 		for (String paramStr : paramBits) {
 			String[] paramStrBits = paramStr.split("=", 2);
-			
+
 			if (paramBits.length == 1) {
 				continue;
 			}
@@ -39,4 +39,12 @@ public class Rq {
 		return params.get(name);
 	}
 
+	public int getIntParam(String name, int defaultValue) {
+		try {
+			return Integer.parseInt(getParam(name));
+		} catch (NumberFormatException e) {
+
+		}
+		return defaultValue;
+	}
 }
