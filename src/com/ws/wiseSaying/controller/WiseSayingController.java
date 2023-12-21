@@ -48,4 +48,11 @@ public class WiseSayingController {
 		}
 
 	}
+
+
+	public void remove() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 }
