@@ -4,9 +4,9 @@ import com.ws.system.controller.SystemController;
 import com.ws.wiseSaying.controller.WiseSayingController;
 
 public class App {
-	
+
 	int system_status = 1;
-	
+
 	public App() {
 	}
 
@@ -15,12 +15,12 @@ public class App {
 
 		SystemController systemController = new SystemController();
 		WiseSayingController wiseSayingController = new WiseSayingController();
-		
+
 		while (system_status == 1) {
 			System.out.print("명령어 ) ");
 			String cmd = Container.getScanner().nextLine().trim();
 			Rq rq = new Rq(cmd);
-			
+
 			switch (rq.getActionCode()) {
 			case "종료":
 				systemController.exit();
@@ -34,6 +34,9 @@ public class App {
 				break;
 			case "삭제":
 				wiseSayingController.remove(rq);
+				break;
+			case "수정":
+				wiseSayingController.modify(rq);
 				break;
 			default:
 				System.out.println("존재하지 않는 명령어입니다.");
