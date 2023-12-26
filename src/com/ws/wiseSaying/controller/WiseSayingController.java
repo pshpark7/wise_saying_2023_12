@@ -12,7 +12,7 @@ public class WiseSayingController {
 	private WiseSayingService wiseSayingService;
 
 	public WiseSayingController() {
-		wiseSayingService = new WiseSayingService();
+		wiseSayingService = Container.wiseSayingService;
 	}
 
 	public void write() {
